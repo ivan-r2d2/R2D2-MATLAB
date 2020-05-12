@@ -7,6 +7,7 @@
    https://ieeexplore.ieee.org/document/8853606
 3. Calle, I. 
 
+---
 All the implementation of the algorithms are inside de class "robot". So you just need to instantiate objects of this class to create "robots".
   - In the folder "BASICS" we see simple examples to use this class.
   - In the folder "ODOMETRY" 
