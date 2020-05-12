@@ -51,40 +51,14 @@ classdef robot < handle
     %------------------------------------------------------------------%
     methods
         %---------------------- CONSTRUCTOR -------------------------%
-        function robot = robot(FLAG)
+        function robot = robot(name)
             % robot.robot Constructor function
-            %
-            %   ROBOT(FLAG) returns a valid "robot" object. The argument
-            %   'FLAG' determines if it's going to appear the 'welcome'
-            %   message box.
             
             %-----------------------------------------------------------%
-            % 1. INITIAL CONFIGURATION
+            % 1. SET THE ROBOT TO USE
             %-----------------------------------------------------------%
-            %  1.1. SET DEFAULT VALUE OF 'FLAG'
-            if(nargin==0)
-                FLAG = 0;   % By default we don't show message box
-            end
-            
-            %-----------------------------------------------------------%
-            % 2. DISPLAY MESSAGE BOX
-            %-----------------------------------------------------------%
-            SHOW_MSGBOX = 0;            % FLAG TO DISPLAY MSG BOX
-            if(SHOW_MSGBOX || FLAG)
-                % 2.1. GET PATH OF 'robot' m-FILE
-                robotpath = fileparts( mfilename('fullpath') );
-                % 2.2. LOAD ICON
-                str = [robotpath '/R2D2-00.png'];
-                robot_icon = imread(str);
-                % 2.3. DISPLAY MESSAGE WINDOW
-                color = (0:255)/255;
-                color = [color(:) color(:) color(:)];
-                h = msgbox({'You are using the R2D2 library of robot motion...!!!',...
-                    'Author: Ivan A. Calle Flores', 'e-mail: ivan.calle.flores@gmail.com'},...
-                    'R2D2 Motion library',...
-                    'custom', robot_icon, color,...
-                    'modal');
-                uiwait(h)
+            if(nargin==1)
+                robot.set_robot(name);
             end
         end
         
