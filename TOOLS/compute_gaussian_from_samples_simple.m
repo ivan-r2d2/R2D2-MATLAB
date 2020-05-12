@@ -1,8 +1,8 @@
 function [mu, P] = compute_gaussian_from_samples_simple(X)
-% COMPUTE_GAUSSIAN_FROM_SAMPLES Compute gaussian approximation
+% COMPUTE_GAUSSIAN_FROM_SAMPLES_SIMPLE
 %
-%   [MU, P] = COMPUTE_GAUSSIAN_FROM_PARTICLES(X) computes the gaussian 
-%             statistics of a set of samples.
+%   COMPUTE_GAUSSIAN_FROM_SAMPLES_SIMPLE (X) Computes the "straight"
+%   gaussian statistics of a set of samples.
 %
 % OUTPUTS
 %   mu: Mean of the samples. (column)

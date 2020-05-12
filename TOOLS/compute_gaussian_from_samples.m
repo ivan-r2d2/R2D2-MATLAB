@@ -1,7 +1,7 @@
 function [mu, P] = compute_gaussian_from_samples(X, FLAG)
 % COMPUTE_GAUSSIAN_FROM_SAMPLES Compute gaussian approximation
 %
-%   COMPUTE_GAUSSIAN_FROM_SAMPLES(X) computes the gaussian 
+%   COMPUTE_GAUSSIAN_FROM_SAMPLES(X) computes the "corrected" gaussian 
 %   statistics of a set of robot pose samples.
 %
 % OUTPUTS
@@ -45,15 +45,14 @@ if(all(angles) || all(~angles))
     mean_angles = mean(X(:,3));
 else
     % If not, this is a special case
-    %   -> Mean of positive angles
+    %  - Mean of positive angles
     mean_pos_angles = mean(X(angles,3), 1);
-    %   -> Mean of negative angles
+    %  - Mean of negative angles
     mean_neg_angles = mean(X(~angles,3), 1);
-    %   -> Indicators
+    %  - Indicators
     suma  = mean_pos_angles + mean_neg_angles;
     resta = mean_pos_angles - mean_neg_angles;
-    
-    % Compute the mean
+    %  - Compute the mean
     if(resta<pi)
         % IF THE MEAN IS IN THE EXPECTED SIDE
         mean_angles = mean(X(:,3));
@@ -67,7 +66,6 @@ else
             mean_angles = mean_angles - 2*pi;
         end
     end
-    
     % DEBUG MESSAGES
     if(FLAG)
         fprintf(' mean pos: %2.4f\n', mean_pos_angles*180/pi)

@@ -30,8 +30,8 @@ y = exp(-0.5*((x - ones(N,1)*mu).^2)./var);
 %  2.2. ADD THE NORMALIZATION TERM
 y = y./sqrt((2*pi*var));
 %  2.3. SET LOWER LIMITS FOR NUMERICAL REASONS
-idx = y<1e-6;
-y(idx) = 1e-6;
+idx = y<1e-10;
+y(idx) = 1e-10;
 
 
 end

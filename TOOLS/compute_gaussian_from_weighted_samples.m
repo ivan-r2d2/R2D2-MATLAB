@@ -1,8 +1,8 @@
-function [mu, P, nk] = compute_gaussian_from_weighted_samples(X, PM, PZ, FLAG)
+function [mu,P,nk] = compute_gaussian_from_weighted_samples(X,PM,PZ,FLAG)
 % COMPUTE_GAUSSIAN_FROM_WEIGHTED_SAMPLES Compute gaussian approximation
 %
-%   [MU, P] = COMPUTE_GAUSSIAN_FROM_SAMPLES2(X) computes the gaussian 
-%             statistics of a set of samples.
+%   [MU, P] = COMPUTE_GAUSSIAN_FROM_WEIGHTED_SAMPLES(X) computes the
+%             gaussian statistics of a set of "weighted" samples.
 %
 % OUTPUTS
 %   mu: Mean of the samples (column)

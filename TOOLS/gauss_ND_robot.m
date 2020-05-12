@@ -27,7 +27,6 @@ if(length(mu) ~= D)
     error(' gauss_ND_robot: Mean and data dimension does not match')
 end
 
-
 %----------------------------------------------------------------------%
 % 2. COMPUTE OF THE PROBABILITY
 %----------------------------------------------------------------------%
@@ -42,8 +41,8 @@ AA = CC/P;
 %  2.4. CALCULO DEL GAUSIANO
 p = c*exp(-0.5*sum((AA.*CC),2));
 %  2.5. SET LOWER LIMITS FOR NUMERICAL REASONS
-idx    = p<1e-20;
-p(idx) = 1e-20;
+idx    = p<1e-10;
+p(idx) = 1e-10;
 
 
 end

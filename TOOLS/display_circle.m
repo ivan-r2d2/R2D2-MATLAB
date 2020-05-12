@@ -28,11 +28,13 @@ if nargin < 5
     NN = 24;
 end
 
+
 %----------------------------------------------------------------------%
 % 2. GET THE LOCATION OF THE ROBOT
 %----------------------------------------------------------------------%
 xx = x(1); 
 yy = x(2);
+
 
 %----------------------------------------------------------------------%
 % 3. COMPUTE REPRESENTATIVE POINTS OF THE CIRCLE
@@ -40,6 +42,7 @@ yy = x(2);
 ang = linspace(0,2*pi,NN)';
 x_circle = xx*ones(NN,1) + B*cos(ang);         % x-components
 y_circle = yy*ones(NN,1) + B*sin(ang);         % y_components
+
 
 %----------------------------------------------------------------------%
 % 4. DRAW THE ROBOT

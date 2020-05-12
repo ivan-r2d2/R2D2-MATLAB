@@ -33,6 +33,7 @@ end
 x_r = c(1); 
 y_r = c(2);
 
+
 %----------------------------------------------------------------------%
 % 2. PLOT THE ROBOT
 %----------------------------------------------------------------------%
@@ -41,9 +42,7 @@ ang = linspace(theta_o, theta_f,NN)';
 xx = x_r*ones(NN,1) + r*cos(ang);         % x-components
 yy = y_r*ones(NN,1) + r*sin(ang);         % y_components
 % 2.2. Plot the circle
-%   -> Make the figure identified by "h_fig" the current figure
 figure(h_fig)
-%   -> Plot
 plot(xx,yy, color,'linewidth',2)
 hold on
 
