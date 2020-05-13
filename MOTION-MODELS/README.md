@@ -12,7 +12,7 @@ All the implementation of the algorithms are inside de class "robot". So you jus
    - In the folder "BASICS" we see simple examples to use this class.
    - In the folder "VELOCITY" we have examples for [1] and [2]
    - In the folder "ODOMETRY" we have examples for [1] and [3]
-   - To run de demos you must add to the Matlab path the folder TOOLS
+   - To use this demos you must add to the Matlab path the folder TOOLS
 
 ---
 Finally the functions "sample_motion_model_odometry", "sample_motion_model_velocity", "motion_model_odometry", and "motion_model_velocity" are high performance vectorized implementations of the sampling and density algorithms.
