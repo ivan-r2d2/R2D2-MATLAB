@@ -15,4 +15,12 @@ All the implementation of the algorithms are inside de class "robot". So you jus
    - To use this demos you must add to the Matlab path the folder TOOLS
 
 ---
-Finally the functions "sample_motion_model_odometry", "sample_motion_model_velocity", "motion_model_odometry", and "motion_model_velocity" are high performance vectorized implementations of the sampling and density algorithms.
+There are four types of motion models when you use the 'robot': "my_robot.set_motion_model(MOTION_MODEL)" <br/>
+   
+   - 'STANDARD': The standard model described in [1] <br/>
+   - 'STANDARD2': The improved model described in [2], [3]  <br/>
+   - 'IMPROVED': The improved model with a Gausian in-place rotation <br/>
+   - 'GAUSSIAN': The full Gaussian motion model <br/>
+
+---
+Finally, the functions "sample_motion_model_odometry", "sample_motion_model_velocity", "motion_model_odometry", and "motion_model_velocity" are high performance vectorized implementations of the sampling and density algorithms.
