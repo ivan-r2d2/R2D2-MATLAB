@@ -1,4 +1,4 @@
 # Maps to perform robot autonomous navigations
-This
+There are some grid files in the ROS format (Yaml and Image file)
 
-![Alt text](map_01.png?raw=true "Title")
+![Alt text](map_01e.png?raw=true "Title")
