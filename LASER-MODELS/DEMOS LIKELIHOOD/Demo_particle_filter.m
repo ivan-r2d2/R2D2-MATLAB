@@ -159,13 +159,15 @@ for i=1:STEPS
     % D. PARTICLE FILTER
     %-------------------------------------------------------------%
     %  PREDICTION STEP
+    tt = tic;
     X = sample_motion_model_velocity(X, u_VELOCITY, dt,...
             alpha, MOTION_MODEL);
+    TT = TT + toc(tt);
     %  CORRECTION STEP
-    tt = tic;
+    %tt = tic;
     q = my_rfinder.likelihood_field_range_finder_model(s, X, 1);
     q = q.^0.35;
-    TT = TT + toc(tt);
+    %TT = TT + toc(tt);
     %  RESAMPLING
     [keep, Neff] = stratified_resample(q);
     X = X(keep,:);
