@@ -12,6 +12,7 @@ laser measurements.
 
 The code to generarte this kind of maps is (Each row is a line):
 
+```Matlab
 map = ...
      [ 1.02   1   1.02  10;
        1  10  10  10;
@@ -31,3 +32,4 @@ map = ...
        5   6  10   6];
 %  1.2. SAVE THE MAP            
 save([path, name, '.mat'], 'map')
+```
