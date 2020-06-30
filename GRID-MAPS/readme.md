@@ -5,8 +5,9 @@
 2. S. Thrun, W. Burgard, and D. Fox. Probabilistic Robotics, MIT-Press, 2005.
 
 
-To 
+In order to be able to read the YAML files we use the library "yamlmatlab":
 https://code.google.com/archive/p/yamlmatlab/downloads
+
 ---
 ### This library (the class 'occ_grid') has the following main features
 
