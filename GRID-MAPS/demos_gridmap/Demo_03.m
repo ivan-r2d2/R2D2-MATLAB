@@ -47,10 +47,14 @@ theta = -0*7*pi/8;
 x = [xx; yy; theta];
 my_robot.set_pose(x);
 %  3.2. DISPLAY ROBOT
-my_grid.display_robot(x)
+%my_grid.display_robot(x)
 my_robot.display_vehicle(my_grid.h_vehicle);
-%  3.3. DELTA OF TIME
+%  3.3. DISPLAY ROBOT COORDINATES
+my_grid.get_robot_index_coordinates(x);
+my_grid.plot_occupancy_grid()
+%  3.4. DELTA OF TIME
 dt = 0.5;
+
 
 
 %----------------------------------------------------------------------%
@@ -65,7 +69,7 @@ for i = 1:N
     % B. COMPUTE "real" MOTION
     xp = my_robot.sample_motion_model_velocity(u, dt);
     my_robot.display_vehicle(my_grid.h_vehicle);
-    my_grid.display_robot(xp)
+    %my_grid.display_robot(xp)
     % C. COMPUTE ROBOT BODY COORDINATES IN THE GRID MAP
     my_grid.get_robot_index_coordinates(xp);
     my_grid.plot_occupancy_grid()
@@ -80,4 +84,4 @@ end
 %----------------------------------------------------------------------%
 disp(' ')
 my_robot.display_pose()
-my_robot.plot_robot('-r')
+%my_robot.plot_robot('-r')
